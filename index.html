@@ -4,18 +4,17 @@
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
       //init
-      document.getElementById("login-btn").addEventListener("click", function() {
-        alert("this button doesn't do anything yet");
-      });
     });
   </script>
 </head>
 <body>
   <div id="main">
     <h1>Welcome to IslandOnline</h1>
-    <input type="text" placeholder="username" />
-    <input type="password" placeholder="password" />
-    <button id="login-btn">Log In</button>
+    <form action="/meme" method="POST">
+      <input type="text" placeholder="username" name="username"/>
+      <input type="password" placeholder="password" name="password"/>
+      <button type="submit" id="login-btn">Log In</button>
+    </form>
     <a href="signup.html">Sign Up</a>
   </div>
 </body>

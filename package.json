@@ -1,0 +1,9 @@
+{
+  "name": "island-online",
+  "version": "0.0.1",
+  "description": "an online island for your friends",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  }
+}

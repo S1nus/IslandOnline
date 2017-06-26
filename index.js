@@ -20,17 +20,6 @@ app.post('/login', function(req, res) {
   console.log(req.body.password);
 });
 
-io.on('connection', function(socket) {
-  console.log("A client has connected");
-  messageHandler.mySockets.push(socket);
-  socket.room = null;
-  socket.on('disconnect', function() {
-    var index = messageHandler.mySockets.indexOf(this);
-    messageHandler.mySockets.splice(index, 1);
-    console.log("A client has disconnected");
-  });
-});
-
 http.listen(3000, function() {
   console.log('listening on *:3000');
 });

@@ -1,0 +1,28 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      //init
+      document.getElementById("signup-btn").addEventListener("click", function(e) {
+        if (document.getElementsByName("password")[0].value != document.getElementsByName("passwordConfirm")[0].value) {
+          e.preventDefault();
+          alert("passwords don't match");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <h1>Welcome to IslandOnline</h1>
+    <form action="/signup" method="post">
+      <input type="text" placeholder="username" name="username"/>
+      <input type="password" placeholder="password" name="password"/>
+      <input type="password" placeholder="confirm password" name="passwordConfirm"/>
+      <button type="submit" id="signup-btn">Sign Up</button>
+    </form>
+    <a href="index.html">Log In</a>
+  </div>
+</body>
+</html>
